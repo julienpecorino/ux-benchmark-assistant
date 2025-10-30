@@ -2,16 +2,28 @@
 # UX Video → Key Screens → Miro (Chat Agent Edition)
 
 ## 🎯 Goal
-This tool automates the creation of **UX benchmarks** from **app usage videos** through a conversational chat interface.
+This tool **automates manual UX benchmarking tasks** for Designers, eliminating the tedious work of creating visual comparisons.
 
-It detects **screen changes** inside videos, extracts key screenshots, and uploads them to **Miro** - all through natural language conversation.  
-Images are laid out **side-by-side** (horizontal layout) for easy comparison, with each app's screenshots grouped together.  
-Multiple apps are arranged in rows, making it perfect for building visual UX comparisons.
+**Traditionally, designers spend hours:**
+- Manually scrubbing through long video recordings frame by frame
+- Identifying key screen transitions
+- Manually taking screenshots
+- Organizing and uploading images to Miro
+- Aligning screenshots for side-by-side comparison
+
+**This tool does all of that automatically:**
+- 🤖 Detects **screen changes** in videos using intelligent algorithms
+- 📸 Extracts **key screenshots** at the right moments (after transitions complete)
+- 📤 Uploads directly to **Miro** through a conversational chat interface
+- 📐 Arranges images **side-by-side** (horizontal layout) for easy comparison
+- 🎯 Groups each app's screenshots together in separate rows
+
+**Result**: Create professional UX benchmarks in minutes, not hours!
 
 **New**: Chat with an AI agent instead of typing command-line arguments!
 
 ## 🤖 Chat Agent Features
-- **Natural language processing**: "upload image from my willo.MP4 video"
+- **Natural language processing**: "upload image from my myVideo.MP4 video"
 - **Automatic parameter extraction**: "I want 300px gap between images"
 - **Progress reporting**: Real-time updates during processing
 - **Review workflow**: Save locally first, then upload selected images
@@ -79,18 +91,18 @@ python benchmark_agent.py
 ```
 🤖 Benchmark Agent: Welcome! I'll help you create UX benchmarks in 3 simple steps...
 
-😀 You: willo.mp4
-🤖 Benchmark Agent: Got it! Processing willo.mp4 from start to finish...
-🤖 Benchmark Agent: ✅ Done! I extracted 42 keyframes and saved them to screenshots/Willo/
+😀 You: myVideo.mp4
+🤖 Benchmark Agent: Got it! Processing myVideo.mp4 from start to finish...
+🤖 Benchmark Agent: ✅ Done! I extracted 42 keyframes and saved them to screenshots/MyVideo/
 
-😀 You: upload willo to board Draft frame Benchmark
-🤖 Benchmark Agent: Got it! I'll upload your Willo screenshots to the Draft board, Benchmark frame.
-🤖 Benchmark Agent: 🎉 Done! Uploaded your Willo screenshots to Draft board, Benchmark frame.
+😀 You: upload myVideo to board Draft frame Benchmark
+🤖 Benchmark Agent: Got it! I'll upload your MyVideo screenshots to the Draft board, Benchmark frame.
+🤖 Benchmark Agent: 🎉 Done! Uploaded your MyVideo screenshots to Draft board, Benchmark frame.
 ```
 
 **Or step-by-step:**
 ```
-😀 You: willo.mp4
+😀 You: myVideo.mp4
 🤖 Benchmark Agent: Processing entire video...
 🤖 Benchmark Agent: ✅ Done! 42 screenshots saved. Ready for Step 2?
 
@@ -122,8 +134,8 @@ python benchmark_agent.py
 ```
 
 ### 🔧 Available Commands
-- **Process video**: Just provide the filename! "willo.mp4" or "demo.mp4" (processes entire video)
-- **Power user upload**: "upload willo to board Draft frame Benchmark" (one command does everything!)
+- **Process video**: Just provide the filename! "myVideo.mp4" or "demo.mp4" (processes entire video)
+- **Power user upload**: "upload myVideo to board Draft frame Benchmark" (one command does everything!)
 - **List images**: "show me my images" or "list images for MyApp"
 - **Upload to Miro**: "upload to Miro" or "proceed with upload"
 - **Configure settings**: "set image width to 500" or "change spacing to 200"
@@ -135,7 +147,7 @@ python benchmark_agent.py
 ### 📊 Legacy Command Line (Still Available)
 If you prefer the old command-line interface:
 ```bash
-python Benchmark.py --video demo.mp4 --app "Willo" --image-width 600 --layout horizontal --image-spacing 100
+python Benchmark.py --video demo.mp4 --app "MyVideo" --image-width 600 --layout horizontal --image-spacing 100
 ```
 
 **Note**: The `--max` parameter is now optional. By default, the entire video is processed.
